@@ -1,0 +1,48 @@
+.container {
+    width: 75%;
+    margin: 3rem auto;
+}
+
+.word-section {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.timer-section {
+    text-align: center;
+}
+
+.input-section {
+    display: block;
+    margin: 7rem auto;
+    text-align: center;
+}
+
+.input-section input {
+    width: 70%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.result-section {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.word {
+    display: inline-block;
+    margin: .2rem;
+}
+
+.background {
+    background-color: rgb(216, 213, 213);
+}
+
+.failed {
+    background-color: rgb(228, 66, 66);
+}
+
+.successful {
+    background-color: rgb(28, 211, 28);
+}
