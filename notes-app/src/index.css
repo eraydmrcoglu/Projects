@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #cdaadb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  background: #e4ecfb;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  margin: 5rem auto 1.5rem auto;
+}
+
+.container h1 {
+  width: 100%;
+  text-align: center;
+  color: #3f72af;
+  margin-bottom: 2rem;
+}
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container form > input {
+  height: 30px;
+  margin-bottom: 1rem;
+  padding: 15px;
+  color: #3f72af;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+}
+.container form .colorContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 0.3rem;
+  background: #fff;
+}
+.container form .colorContainer textarea {
+  color: #3f72af;
+  font-size: 1rem;
+  resize: none;
+  font-family: inherit;
+}
+.container form .colorContainer .selectColor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.container form .colorContainer .selectColor .colors {
+  display: flex;
+  align-items: center;
+}
+.container form .colorContainer .selectColor .colors input {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border-radius: 50%;
+}
+.container form .colorContainer .selectColor .colors input:checked::after {
+  content: '\e876';
+  font-family: 'Material Icons';
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+.container form .colorContainer .selectColor .colors input:hover::before {
+  content: '\e876';
+  font-family: 'Material Icons';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: #ccc;
+}
+.container form .colorContainer .selectColor button {
+  height: 30px;
+  padding: 0 1rem;
+  border-radius: 0.3rem;
+  background: #3f72af;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.container form .colorContainer .selectColor button:hover {
+  background: #112d4e;
+}
+.notesContainer {
+  width: 40vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  align-items: flex-start;
+  grid-template-areas:
+    'search search'
+    '. .';
+}
+.notesContainer .search {
+  width: 100%;
+  padding: 10px;
+  color: #3f72af;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  grid-area: search;
+}
+.notesContainer details {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.notesContainer details[open] > summary::before {
+  content: '\e15b';
+  font-family: 'Material Icons';
+}
+.notesContainer details summary {
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.notesContainer details summary::webkit-details-marker {
+  display: none;
+}
+.notesContainer details summary::before {
+  content: '\e145';
+  font-family: 'Material Icons';
+  margin-right: 0.2rem;
+}
+.notesContainer details p {
+  border-top: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
