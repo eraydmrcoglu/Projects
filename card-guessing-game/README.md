@@ -1,6 +1,4 @@
-# DEMO
-
-[Live](https://cardguessinggame.vercel.app)
+[Demo](https://cardguessinggame.vercel.app)
 
 # Getting Started with Create React App
 
