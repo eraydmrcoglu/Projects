@@ -10,7 +10,6 @@ function Result() {
         <h1>Sonuç</h1>
       </div>
       <div>
-        <p>{correctWords.length + failedWords.length} dakika başına kelimeler</p>
         <p>Doğru kelimeler: {correctWords.length}</p>
         <p>Hatalı kelimeler: {failedWords.length}</p>
       </div>
