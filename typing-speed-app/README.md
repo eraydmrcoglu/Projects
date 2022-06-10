@@ -1,4 +1,4 @@
-[Demo](https://typing-speed-app.vercel.app)
+[Demo](https://typing-speed-app.vercel.app
 
 # Getting Started with Create React App
 
