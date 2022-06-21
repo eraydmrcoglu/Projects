@@ -1,0 +1,441 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  .home-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 75%;
+    font-family: $font;
+    color: $white;
+    font-weight: 700;
+    z-index: 2;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+    .space-between {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      cursor: pointer;
+      font-size: 1.4rem;
+      user-select: none;
+    }
+    .nav-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0 32px;
+        @media (max-width: 976px) {
+          padding: 0 8px;
+        }
+        a {
+          display: inline-block;
+          font-family: $font;
+          color: $white;
+          text-decoration: none;
+          font-weight: 700;
+          @media (max-width: 976px) {
+            font-size: 0.875rem;
+          }
+          .header-hidden-text {
+            // visible-hidden class from A11y-101
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+            &:focus {
+              clip: auto;
+              height: auto;
+              overflow: auto;
+              position: absolute;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-home {
+    position: relative;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+    margin: auto;
+    color: $white;
+    font-family: $font;
+    @media (max-height: 800px) {
+      min-height: 75vh;
+      padding: 3rem 0;
+    }
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title {
+        font-size: 8rem;
+        margin-right: 8rem;
+        @media (max-height: 800px) {
+          font-size: 5rem;
+        }
+        @media (max-width: 1536px) {
+          font-size: 6rem;
+          margin-right: 2rem;
+        }
+        @media (max-width: 1280px) {
+          font-size: 5rem;
+        }
+        @media (max-width: 967px) {
+          font-size: 2rem;
+          margin-right: 1rem;
+        }
+        .playful {
+          transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+          animation: 10s ease 0s infinite alternate none running rainbow;
+        }
+      }
+      .dev-image {
+        width: 300px;
+        @media (max-height: 800px) {
+          width: 200px;
+        }
+        @media (max-width: 1280px) {
+          width: 200px;
+        }
+        @media (max-width: 967px) {
+          width: 100px;
+        }
+      }
+    }
+
+    .job-title {
+      font-size: 1.4rem;
+      font-weight: 400;
+      @media (max-width: 1536px) {
+        font-size: 1.2rem;
+      }
+      @media (max-width: 967px) {
+        font-size: 0.9rem;
+      }
+    }
+    .scroll-indicator {
+      cursor: pointer;
+      position: absolute;
+      background: none;
+      outline: none;
+      border: none;
+      color: $white;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -95%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font;
+      span {
+        margin: 0.5rem 0;
+      }
+      &:focus {
+        outline: none;
+      }
+      @media (max-width: 768px) {
+        font-size: 0.875rem;
+        top: 80%;
+        transform: translate(-50%, -80%);
+      }
+    }
+  }
+  .project-container {
+    position: relative;
+    min-height: 100vh;
+    @media (max-width: 967px) {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .project {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 967px) {
+        flex-direction: column;
+      }
+      .project-info {
+        font-family: $font;
+        width: 300px;
+        text-align: left;
+        color: $white;
+        margin: 0 32px;
+        @media (max-width: 967px) {
+          width: 275px;
+        }
+        .tools-list {
+          margin-top: 8px;
+          font-family: $font;
+          li {
+            @media (max-width: 967px) {
+              font-size: 0.875rem;
+            }
+            @media (max-height: 750px) {
+              font-size: 0.875rem;
+            }
+          }
+        }
+        h2 {
+          cursor: pointer;
+          font-size: 2rem;
+          margin: 0;
+          &:hover {
+            transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+            animation: 10s ease 0s infinite alternate none running rainbow;
+          }
+          @media (max-height: 800px) {
+            font-size: 1.6rem;
+          }
+          @media (max-width: 967px) {
+            font-size: 1.4rem;
+          }
+        }
+        h3 {
+          font-size: 1.25rem;
+          margin-bottom: 0;
+        }
+        p {
+          margin: 1rem 0 0.5rem 0;
+          line-height: 24px;
+          font-weight: 300;
+          @media (max-height: 800px) {
+            font-size: 0.875rem;
+            line-height: 20px;
+          }
+          @media (max-width: 967px) {
+            font-size: 0.875rem;
+            line-height: 20px;
+          }
+        }
+        .project-read-more {
+          display: flex;
+          align-items: center;
+          background: none;
+          outline: none;
+          border: none;
+          color: white;
+          font-family: $font;
+          font-weight: bold;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          svg {
+            transition: transform 0.3s ease;
+            display: block;
+            margin-top: 0.1rem;
+            margin-left: 0.25rem;
+          }
+          &:hover {
+            svg {
+              transform: translateX(2px);
+            }
+          }
+        }
+        .project-btns {
+          display: flex;
+          gap: 1rem;
+          @media (max-width: 967px) {
+            justify-content: center;
+          }
+          .project-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+            padding: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 50px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            color: $black;
+            background: snow;
+            font-weight: 700;
+            font-family: $font;
+            font-size: 1rem;
+            @media (max-width: 967px) {
+              width: 100px;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+      .project-image {
+        display: block;
+        cursor: pointer;
+        width: 800px;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        margin: 0 32px;
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0 2.8px 2.2px rgba(211, 211, 211, 0.02),
+          0 6.7px 5.3px rgba(211, 211, 211, 0.028),
+          0 12.5px 10px rgba(211, 211, 211, 0.035),
+          0 22.3px 17.9px rgba(211, 211, 211, 0.042),
+          0 41.8px 33.4px rgba(211, 211, 211, 0.05),
+          0 100px 80px rgba(211, 211, 211, 0.07);
+        &:hover {
+          box-shadow: 0 2.8px 2.2px rgba(256, 256, 256, 0.02),
+            0 6.7px 5.3px rgba(256, 256, 256, 0.028),
+            0 12.5px 10px rgba(256, 256, 256, 0.035),
+            0 22.3px 17.9px rgba(256, 256, 256, 0.042),
+            0 41.8px 33.4px rgba(256, 256, 256, 0.05),
+            0 100px 80px rgba(256, 256, 256, 0.07);
+        }
+        @media (max-width: 1280px) {
+          width: 500px;
+          height: 280px;
+        }
+        @media (max-width: 967px) {
+          width: 400px;
+          height: 220px;
+          margin: 0 0 1rem 0;
+        }
+        @media (max-width: 700px) {
+          width: 280px;
+          height: 160px;
+        }
+      }
+    }
+    progress[value] {
+      -webkit-appearance: none;
+      appearance: none;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 15px;
+      border: none;
+      background-color: #eee;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    progress[value]::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+    progress[value]::-webkit-progress-value {
+      border-radius: 2px;
+      background-color: $black;
+    }
+    progress[value]::-moz-progress-bar {
+      border-radius: 2px;
+      background-color: $black;
+    }
+  }
+
+  footer {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $font;
+    h2 {
+      color: $white;
+      font-size: 4rem;
+      @media (max-width: 967px) {
+        font-size: 2.5rem;
+      }
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        padding: 0 32px;
+        @media (max-width: 700px) {
+          padding: 0 16px;
+        }
+        a {
+          display: inline-block;
+          font-family: $font;
+          color: $white;
+          text-decoration: none;
+          font-weight: 700;
+          .footer-hidden-text {
+            // visible-hidden class from A11y-101
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+            &:focus {
+              clip: auto;
+              height: auto;
+              overflow: auto;
+              position: absolute;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Rainbow text
+@keyframes rainbow {
+  0% {
+    color: rgb(240, 77, 255);
+  }
+  25% {
+    color: rgb(255, 77, 77);
+  }
+  50% {
+    color: rgb(255, 197, 77);
+  }
+  75% {
+    color: rgb(106, 237, 118);
+  }
+  100% {
+    color: rgb(0, 153, 255);
+  }
+}
